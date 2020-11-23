@@ -3,8 +3,8 @@ def hello(array)
   while i < array.length
     yield(array[i])
     i += 1
+    binding.pry
   end
-  binding.pry
 end
 
 hello(["Tim", "Tom", "Jim"]) { |name| puts "Hi, #{name}" }
